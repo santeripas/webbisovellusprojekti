@@ -70,7 +70,7 @@ table {
 .overlay {
     position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Tumma tausta tekstille */
+    background: rgba(0, 0, 0, 0.7); 
     color: white;
     width: 100%;
     text-align: center;
@@ -80,5 +80,5 @@ table {
 }
 
 .image-container:hover .overlay {
-    opacity: 1; /* Teksti näkyy hiiren ollessa kuvan päällä */
+    opacity: 1; 
 }

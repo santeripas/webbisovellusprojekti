@@ -1,5 +1,5 @@
-const apiKey = 'ee65b62e6f5c95e7e37b4973'; // Laita tähän oma ExchangeRate API-avaimesi
-const weatherApiKey = 'be29c4bfd559e38e52e6861d4e62be9e'; // Laita tähän OpenWeatherMap API-avaimesi
+const apiKey = 'ee65b62e6f5c95e7e37b4973'; 
+const weatherApiKey = 'be29c4bfd559e38e52e6861d4e62be9e'; 
 const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;
 
 // Haetaan kaikki valuutat ja täytetään dropdownit
@@ -24,7 +24,7 @@ fetch(apiUrl)
     })
     .catch(error => console.error('Virhe haettaessa valuuttoja:', error));
 
-// Lisää muunnosnapin toiminto
+
 document.getElementById('convertBtn').addEventListener('click', () => {
     const amount = document.getElementById('amount').value;
     const fromCurrency = document.getElementById('fromCurrency').value;
@@ -46,7 +46,7 @@ document.getElementById('convertBtn').addEventListener('click', () => {
         .catch(error => console.error('Virhe muunnoksessa:', error));
 });
 
-// Lisää sään hakutoiminto OpenWeatherMap API:lla
+
 document.getElementById('weatherBtn').addEventListener('click', () => {
     const city = document.getElementById('city').value;
 
