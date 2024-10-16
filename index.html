@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Valuuttamuunnin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Matkasuunnittelu</h1>
+        <h2>Sisältää: Valuuttamuuntimen ja säänhaku kentän</h2>
+    </header>
+
+<div class="container">
+    <table>
+        <tr>
+        <th>
+        <img src="/money.png" alt="kuva rahasta" width="260" height="333">
+        </th>
+          <th><div class="container">
+            <label for="amount">Muunnettava summa:</label>
+            <input type="number" id="amount" placeholder="Syötä summa" required>
+
+            <label for="fromCurrency">Valuuttalähde:</label>
+            <select id="fromCurrency"></select>
+
+            <label for="toCurrency">Kohdevaluutta:</label>
+            <select id="toCurrency"></select>
+
+            <button id="convertBtn">Muunna</button>
+
+            <div id="result"></div>
+        </div></th>
+          <th>
+            <div class="container">
+            <h2>Sään tiedot</h2>
+            <label for="city">Syötä kaupunki:</label>
+            <input type="text" id="city" placeholder="Esim. Helsinki" required>
+            <button id="weatherBtn">Hae sää</button>
+            <button id="favoriteBtn">Tallenna suosikiksi</button>
+            <div id="weatherResult"></div>
+            <div id="favoriteCities"></div> <!-- Alue suosikkikaupunkien näyttämiseen -->
+        </div>
+       
+        </th>
+        <th>
+
+          <div class="image-container">
+            <a href="https://maps.app.goo.gl/sx9qBsHQTfPbuDxW8" target="_blank">
+                <img src="/maisema.png" alt="maisemakuva" width="222" height="333">
+                <div class="overlay">Riisitunturi<br><p style="font-size: 14px;"><i>Klikkaa tutustuaksesi tarkemmin</i></p></div>
+            </a>
+        </div>
+
+        </th>
+        </tr>
+      </table>
+    </div>
+
+<h2>Kellonaika</h2>
+<p id="demo"></p>
+
+<p><b>"</b><i>Kello on sitä kun sä kattot tän videon, niin kellon on sillon just sen verran kun tää video tulee ulos, <br>niin kun sä kattot kelloa ja kun video on tullut ulos, niin kello on just sen verran kun sä katot kelloon <br>se on just sen verran ku tää tulee ulos tää video.</i><b>"</b><br><b>- Mikael Kosola(niilo22)</b></p>
+
+<footer>© 2024 Santeri Pasula <a href="https://github.com/santeripas" target="_blank" style="text-decoration:none"><i class="fa fa-github" style="font-size:24px"></i></a></footer>
+
+</body>
+<script>
+    setInterval(myTimer, 1000);
+    
+    function myTimer() {
+      const d = new Date();
+      document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+    }
+    </script>
+</html>
